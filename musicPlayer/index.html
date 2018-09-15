@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>musicPlayer</title>
+		<link rel="icon" href="img/strawberry.png" />
+		<script>
+			function play(j){
+				var audio=document.getElementById('audio'+j);
+				audio.play();
+			}
+			function pause(j){
+				var audio=document.getElementById('audio'+j);
+				audio.pause();
+			}			
+		</script>
+		<style>
+			#div{
+				background-image:url('img/bk3.jpg') ;
+				width: 533px;
+				height: 800px;
+			}
+			.name{
+				color:#1E90FF;
+				text-decoration: none;
+				font-size: 28px;
+				font-family:'隶书';
+			}
+			div a:hover{
+				font-weight: bold;
+			}
+			.play{
+				color:black;
+				text-decoration: none;
+				
+			}
+			.pause{
+				color:black;
+				text-decoration: none;				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div">
+			<a href="#" class="name">感谢你曾经来过</a>
+			<audio src="music/thank.mp3" id="audio1">
+				您的浏览器不支持Audio
+			</audio>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="play" onclick="play(1)">播放</a>&nbsp;
+			<a href="#" class="pause" onclick="pause(1)">暂停</a>
+			<br />
+			
+			<audio src="music/shanqiu.mp3" id="audio2" >
+				您的浏览器不支持Audio
+			</audio>
+			<a href="#" class="name">山丘</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="play" onclick="play(2)">播放</a>&nbsp;
+			<a href="#" class="pause" onclick="pause(2)">暂停</a>
+			<br />
+			
+			<audio src="music/daojiangxing.mp3" id="audio3" >
+				您的浏览器不支持Audio
+			</audio>
+			<a href="#" class="name">盗将行</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="play" onclick="play(3)">播放</a>&nbsp;
+			<a href="#" class="pause" onclick="pause(3)">暂停</a>
+			<br />
+
+			<audio src="music/wanghouyusheng.mp3" id="audio4" >
+				您的浏览器不支持Audio
+			</audio>
+			<a href="#" class="name">往后余生</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="play" onclick="play(4)">播放</a>&nbsp;
+			<a href="#" class="pause" onclick="pause(4)">暂停</a>
+			<br />
+			
+			<audio src="music/laojie.mp3" id="audio5" >
+				您的浏览器不支持Audio
+			</audio>
+			<a href="#" class="name">老街</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="play" onclick="play(5)">播放</a>&nbsp;
+			<a href="#" class="pause" onclick="pause(5)">暂停</a>
+			<br />
+			
+			<audio src="music/qifengle.mp3" id="audio6" >
+				您的浏览器不支持Audio
+			</audio>
+			<a href="#" class="name">起风了</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#" class="play" onclick="play(6)">播放</a>&nbsp;
+			<a href="#" class="pause" onclick="pause(6)">暂停</a>
+			<br />
+		</div>
+	</body>
+</html>
