@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>页面换肤</title>
+		<style>
+			legend{
+				color: red;
+				font-size: 25px;
+				font-weight: bold;
+			}
+			#div1{
+				width:1000px;
+				height:50px;
+				border:1px solid black;
+			}
+			#div2{
+				width:1000px;
+				height:80px;
+				/*border:1px solid black;*/
+				margin-top: 20px;
+			}
+		</style>
+		<script>
+			var arr=['yellow','pink','deepskyblue','limegreen','orange','red'];			
+
+			function fun(i){
+				var bt=document.getElementById('bt'+i);
+				var div=document.getElementById('div2');
+				
+				div.style.backgroundColor=arr[i];
+				localStorage.setItem('bk',arr[i]);
+				localStorage.setItem('bt'+i,40+'px');		
+			}
+
+			window.onload=function(){
+				//localStorage.clear();
+				
+				var div=document.getElementById('div2');
+				var temp;
+				
+				div.style.backgroundColor=localStorage.getItem('bk');
+				
+				//对按钮做标记  再次刷新时选择的按钮会比其他的大  便于区分
+				for(var j=0;j<arr.length;j++){
+					if(arr[j]===localStorage.getItem('bk')){
+						temp=j;
+						console.log(temp);
+					}
+				}
+				var btt=document.getElementById('bt'+temp);
+				btt.style.width=localStorage.getItem('bt'+temp);
+				btt.style.height=localStorage.getItem('bt'+temp);
+			}
+		</script>
+		
+	</head>
+	<body>
+		<fieldset>
+			<legend>页面换肤</legend>
+			<div id="div1"> 
+				请选择你要更换的颜色：
+				<button id="bt0" style="background-color: yellow; width: 30px;height: 30px;" onclick="fun(0)"></button>
+				<button id="bt1" style="background-color: pink; width: 30px;height: 30px;" onclick="fun(1)"></button>
+				<button id="bt2" style="background-color: deepskyblue; width: 30px;height: 30px;" onclick="fun(2)"></button>
+				<button id="bt3" style="background-color: limegreen; width: 30px;height: 30px;" onclick="fun(3)"></button>
+				<button id="bt4" style="background-color: orange; width: 30px;height: 30px;" onclick="fun(4)"></button>
+				<button id="bt5" style="background-color: red; width: 30px;height: 30px;" onclick="fun(5)"></button>
+			</div>
+			<div id="div2">
+				LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，<br>下次打开浏览器访问网站时仍然可以继续使用。
+			</div>
+		</fieldset>
+	</body>
+</html>
