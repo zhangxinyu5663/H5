@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>头像上传</title>
+		<style>
+			#div{
+				width: 180px;
+				height: 180px;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>上传头像</h1>
+		<div id="div" ondragover="dragover(event)" ondrop="drop(event)"></div>
+	</body>
+	<script>
+
+		function dragover(ev){
+			ev.preventDefault();
+		}
+		function drop(ev){
+			ev.preventDefault();
+			var div=document.getElementById('div');
+			var file=ev.dataTransfer.files[0];   //获取拖拽的图片文件
+			if(!/image\/\w+/.test(file.type)){  //判断拖拽的是否为图片文件
+				alert('请拖拽图片文件！');
+				return false;
+			}			
+			var reader=new FileReader();			
+			reader.readAsDataURL(file);
+			reader.onload=function (e){
+				div.innerHTML='<img src="'+this.result+'">';
+			}
+		}
+	</script>
+</html>
