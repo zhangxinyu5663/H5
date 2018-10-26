@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>照片墙</title>
+		<style>
+			#div1{
+				width: 1200px;
+				height: 700px;
+				border:1px solid black;
+				background-image:url(images/bk6.jpg) ;
+				background-repeat:no-repeat ;
+				background-size:cover;
+			}
+			#div2{
+				width: 650px;
+				height: 700px;
+				float: right;
+			}
+			#p1{
+				width: 220px;
+				height: 220px;
+				float: left;
+				margin-top: 30px;
+				margin-left: 60px;
+				background-repeat:no-repeat ;
+				transform:translate(5px,10px) rotate(25deg);
+				background-color:rgba(255,182,193,0.8);
+			}
+			#p1:hover{
+				transform: scale(1.2,1.2) rotate(0deg);
+			}
+			#p2{
+				width: 220px;
+				height: 220px;
+				float: left;
+				margin-left: 60px;
+				margin-top: 30px;
+				background-repeat:no-repeat ;
+				transform:rotate(-10deg);
+				background-color:rgba(135,206,250,0.8);
+				background-origin: 220px 0;
+			}
+			#p2:hover{
+				transform: scale(1.2,1.2) rotate(0deg);
+			}
+			#p3{
+				width: 220px;
+				height: 220px;
+				float: left;
+				margin-top: 80px;
+				margin-left: 60px;
+				background-repeat:no-repeat ;	
+				transform: skew(5deg,5deg);
+				background-color:rgba(255,182,193,0.8);
+				background-origin: 220px 220px;
+			}
+			#p3:hover{
+				transform: scale(1.2,1.2) skew(0deg,0deg);				
+			}
+			#p4{
+				width: 220px;
+				height: 220px;
+				float: left;
+				margin-top: 100px;
+				margin-left: 60px;
+				background-repeat:no-repeat ;
+				transform: translate(30px,30px) rotate(3deg);
+				background-color:rgba(135,206,250,0.8);
+				background-origin:left top;
+			}
+			#p4:hover{
+				transform: scale(1.2,1.2);
+			}
+			#div2 img{
+				margin-left: 10px;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="p1"><img src="images/p1.jpg" /> </div>
+				<div id="p2"><img src="images/p2.jpg"/></div>
+				<div id="p3"><img src="images/p3.jpg"/></div>
+				<div id="p4"><img src="images/p4.jpg"/></div>
+			</div>
+		</div>
+		<div id="div3">
+			<audio src="music/weiwenhuaming.mp3"  controls="controls" autoplay="true">
+				您的浏览器不支持video标签
+			</audio>
+		</div>
+	</body>
+</html>
